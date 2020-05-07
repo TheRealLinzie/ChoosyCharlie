@@ -1,0 +1,26 @@
+const Discord = require('discord.js');
+const client = new Discord.Client();
+var prefix = '!';
+client.on("message", message => {
+    if (message.content == "Choose Charlie") { const replies = ["Dark Souls", "Risk of Rain","Starcraft 2","Smash Ultimate"] 
+    message.replytext = Math.floor((Math.random() * replies.length) + 0)
+    message.channel.send(replies[message.replytext])
+}
+if (message.content === "Hey Charlie"){ 
+    message.channel.send("Leave me alone!");
+        };
+if (message.content.startsWith(prefix + "help")) { 
+    message.channel.send("Just say ~Choose Charlie~");
+        };
+if (message.content.startsWith(prefix + "What do you think of Nick?")) { 
+    message.channel.send("He's absolute garbage at Smash");
+        };
+if (message.content.startsWith(prefix + "What do you think of Brodie?")) { 
+    message.channel.send("He's a nerdlinger");
+        };
+if (message.content.startsWith(prefix + "What do you think of Kenzie?")) { 
+    message.channel.send("Pretty cool if you ask me");
+        };
+})
+
+client.login('NzA3ODMwMjA3NzU4ODYwMzI5.XrOhow.-GPJD8DFnZvwLX-UwUESC27LrAY');
