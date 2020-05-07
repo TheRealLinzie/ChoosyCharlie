@@ -1,0 +1,25 @@
+const Discord = require('discord.js');
+const client = new Discord.Client();
+var prefix = '!';
+client.on("message", message => {
+if (message.content === "Choose Chalire"){
+const replies = ["1","2","3"] message.replytext = Math.floor((Math.random() * replies.length) + 0); 
+message.channel.send(replies[message.replytext]);}
+if (message.content === "Hey Charlie"){ 
+message.channel.send("Leave me alone!");
+};
+if (message.content.startsWith(prefix + "help")) { 
+message.channel.send("Just say ~Choose Charlie~");
+};
+if (message.content.startsWith(prefix + "What do you think of Nick?")) { 
+message.channel.send("He's absolute garbage at Smash");
+};
+if (message.content.startsWith(prefix + "What do you think of Brodie?")) { 
+message.channel.send("He's a nerdlinger");
+};
+if (message.content.startsWith(prefix + "What do you think of Kenzie?")) { 
+message.channel.send("Pretty cool if you ask me");
+};
+})
+
+client.login('Secret');
